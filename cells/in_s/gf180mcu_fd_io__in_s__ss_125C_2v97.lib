@@ -1,0 +1,150 @@
+/*
+ * Copyright 2022 GlobalFoundries PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+	cell ("gf180mcu_fd_io__in_s") {
+		scaling_factors : "gf_factors";
+		area : 26250.000000;
+		pad_cell : true;
+		dont_use : true;
+		dont_touch : true;
+		cell_leakage_power : 2.185670e-03;
+		leakage_power () {
+			when : "!PU !PD !PAD";
+			value : "0.002186";
+		}
+		pin ("PU") {
+			max_transition : 1.000000;
+			direction : "input";
+			input_signal_level : "VDD";
+			rise_capacitance : 0.072758;
+			rise_capacitance_range(0.060757,0.082570);
+			capacitance : 0.071691;
+			fall_capacitance : 0.070625;
+			fall_capacitance_range(0.058125,0.082795);
+			internal_power () {
+				rise_power ("power_inputs_1") {
+					index_1("0.080000, 0.500000, 1.000000");
+					values("-0.255819, 0.067571, 0.073924");
+				}
+				fall_power ("power_inputs_1") {
+					index_1("0.080000, 0.500000, 1.000000");
+					values("0.501712, 1.149116, 1.239393");
+				}
+			}
+		}
+		pin ("PD") {
+			max_transition : 1.000000;
+			direction : "input";
+			input_signal_level : "VDD";
+			rise_capacitance : 0.048829;
+			rise_capacitance_range(0.047182,0.050548);
+			capacitance : 0.049459;
+			fall_capacitance : 0.050090;
+			fall_capacitance_range(0.048632,0.051094);
+			internal_power () {
+				rise_power ("power_inputs_1") {
+					index_1("0.080000, 0.500000, 1.000000");
+					values("-0.143143, 0.254982, 0.604776");
+				}
+				fall_power ("power_inputs_1") {
+					index_1("0.080000, 0.500000, 1.000000");
+					values("0.438652, 1.079467, 1.066813");
+				}
+			}
+		}
+		pin ("PAD") {
+			max_transition : 1.000000;
+			is_pad : true;
+			direction : "input";
+			input_signal_level : "DVDD";
+			rise_capacitance : 3.259016;
+			rise_capacitance_range(3.203330,3.292628);
+			capacitance : 3.276338;
+			fall_capacitance : 3.293660;
+			fall_capacitance_range(3.250609,3.317799);
+		}
+		pin ("Y") {
+			function : "((PAD))";
+			direction : "output";
+			max_capacitance : 0.500000;
+			output_signal_level : "VDD";
+			internal_power () {
+				related_pin : "PAD";
+				rise_power ("power_outputs_1") {
+					index_1("0.08, 0.5, 1");
+					index_2("0, 0.04, 0.1, 0.3, 0.4, 0.5");
+					values("-14.483920, -14.495400, -14.502270, -14.533720, -14.540820, -14.552820", \
+					  "-14.474970, -14.487690, -14.495060, -14.523470, -14.539480, -14.551930", \
+					  "-14.314660, -14.336680, -14.342550, -14.368360, -14.381880, -14.395640");
+				}
+				fall_power ("power_outputs_1") {
+					index_1("0.08, 0.5, 1");
+					index_2("0, 0.04, 0.1, 0.3, 0.4, 0.5");
+					values("17.392790, 17.428740, 17.500450, 17.654860, 17.705390, 17.743960", \
+					  "17.236530, 17.275840, 17.343760, 17.484680, 17.546630, 17.598270", \
+					  "17.152070, 17.192470, 17.262640, 17.417870, 17.473730, 17.510840");
+				}
+			}
+			timing () {
+				related_pin : "PAD";
+				timing_type : "combinational";
+				timing_sense : "positive_unate";
+				cell_rise ("del_1_3_6") {
+					index_1("0.080000, 0.500000, 1.000000");
+					index_2("0.000000, 0.040000, 0.100000, 0.300000, 0.400000, 0.500000");
+					values("2.756838, 2.883924, 3.036248, 3.457600, 3.660373, 3.862020", \
+					  "2.889913, 3.015417, 3.165758, 3.588719, 3.790535, 3.991001", \
+					  "3.045280, 3.171432, 3.321523, 3.744372, 3.946211, 4.146710");
+				}
+				rise_transition ("del_1_3_6") {
+					index_1("0.080000, 0.500000, 1.000000");
+					index_2("0.000000, 0.040000, 0.100000, 0.300000, 0.400000, 0.500000");
+					values("0.379322, 0.545575, 0.762646, 1.507694, 1.888256, 2.280845", \
+					  "0.377609, 0.540872, 0.759683, 1.505395, 1.888547, 2.285937", \
+					  "0.377812, 0.544790, 0.760421, 1.505250, 1.888731, 2.304660");
+				}
+				cell_fall ("del_1_3_6") {
+					index_1("0.080000, 0.500000, 1.000000");
+					index_2("0.000000, 0.040000, 0.100000, 0.300000, 0.400000, 0.500000");
+					values("4.288947, 4.386857, 4.502392, 4.813502, 4.955877, 5.095284", \
+					  "4.005587, 4.104705, 4.218475, 4.529285, 4.671568, 4.811233", \
+					  "4.019955, 4.120451, 4.233888, 4.546564, 4.688538, 4.825961");
+				}
+				fall_transition ("del_1_3_6") {
+					index_1("0.080000, 0.500000, 1.000000");
+					index_2("0.000000, 0.040000, 0.100000, 0.300000, 0.400000, 0.500000");
+					values("0.205343, 0.327655, 0.479984, 0.972039, 1.216671, 1.463932", \
+					  "0.205018, 0.326371, 0.480024, 0.970457, 1.220795, 1.471282", \
+					  "0.205653, 0.327107, 0.479727, 0.969107, 1.216313, 1.463273");
+				}
+			}
+		}
+		pin ("DVDD") {
+			direction : "inout";
+			capacitance : 0;
+		}
+		pin ("DVSS") {
+			direction : "inout";
+			capacitance : 0;
+		}
+		pin ("VDD") {
+			direction : "inout";
+			capacitance : 0;
+		}
+		pin ("VSS") {
+			direction : "inout";
+			capacitance : 0;
+		}
+	}

@@ -1,0 +1,20 @@
+* Copyright 2022 GlobalFoundries PDK Authors
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*     http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+
+.SUBCKT gf180mcu_fd_io__asig_5p0 ASIG5V DVDD DVSS VDD VSS
+D0 DVSS DVDD np_6p0 m=4.0 AREA=40e-12 PJ=82e-6
+C1 DVDD DVSS $[nmoscap_6p0] m=36.0 l=15e-6 w=15e-6
+D2 DVSS ASIG5V np_6p0 m=4.0 AREA=150e-12 PJ=106e-6
+D3 ASIG5V DVDD pn_6p0 m=4.0 AREA=150e-12 PJ=106e-6
+.ENDS

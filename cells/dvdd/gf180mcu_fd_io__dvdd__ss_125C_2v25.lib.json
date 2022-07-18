@@ -1,0 +1,24 @@
+{
+    "cell gf180mcu_fd_io__dvdd": {
+        "pad_cell": "true",
+        "dont_touch": "true",
+        "dont_use": "true",
+        "area": "26250.000000",
+        "pin DVDD": {
+            "direction": "inout",
+            "capacitance": "0",
+            "is_pad": "true",
+            "drive_current": "0",
+            "three_state": "0",
+            "function": "1"
+        },
+        "pin DVSS": {
+            "direction": "inout",
+            "capacitance": "0"
+        },
+        "pin VSS": {
+            "direction": "inout",
+            "capacitance": "0"
+        }
+    }
+}

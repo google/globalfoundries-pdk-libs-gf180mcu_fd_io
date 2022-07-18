@@ -1,0 +1,373 @@
+{
+    "cell gf180mcu_fd_io__in_s": {
+        "scaling_factors": "gf_factors",
+        "area": "26250.000000",
+        "pad_cell": "true",
+        "dont_use": "true",
+        "dont_touch": "true",
+        "cell_leakage_power": "1.427160e-03",
+        "leakage_power ": {
+            "when": "!PU !PD !PAD",
+            "value": "0.001427"
+        },
+        "pin PU": {
+            "max_transition": "1.000000",
+            "direction": "input",
+            "input_signal_level": "VDD",
+            "rise_capacitance": "0.079602",
+            "comp_attribute rise_capacitance_range": "0.064176,0.091797",
+            "capacitance": "0.080122",
+            "fall_capacitance": "0.080643",
+            "comp_attribute fall_capacitance_range": "0.061305,0.096842",
+            "internal_power ": {
+                "rise_power power_inputs_1": {
+                    "index_1": [
+                        0.08,
+                        0.5,
+                        1.0
+                    ],
+                    "values": [
+                        -0.180617,
+                        0.099124,
+                        0.112753
+                    ]
+                },
+                "fall_power power_inputs_1": {
+                    "index_1": [
+                        0.08,
+                        0.5,
+                        1.0
+                    ],
+                    "values": [
+                        0.650858,
+                        1.002711,
+                        1.096133
+                    ]
+                }
+            }
+        },
+        "pin PD": {
+            "max_transition": "1.000000",
+            "direction": "input",
+            "input_signal_level": "VDD",
+            "rise_capacitance": "0.047613",
+            "comp_attribute rise_capacitance_range": "0.046269,0.048594",
+            "capacitance": "0.048974",
+            "fall_capacitance": "0.050336",
+            "comp_attribute fall_capacitance_range": "0.048416,0.051587",
+            "internal_power ": {
+                "rise_power power_inputs_1": {
+                    "index_1": [
+                        0.08,
+                        0.5,
+                        1.0
+                    ],
+                    "values": [
+                        -0.007508,
+                        0.531773,
+                        0.470703
+                    ]
+                },
+                "fall_power power_inputs_1": {
+                    "index_1": [
+                        0.08,
+                        0.5,
+                        1.0
+                    ],
+                    "values": [
+                        0.603662,
+                        0.910301,
+                        0.930611
+                    ]
+                }
+            }
+        },
+        "pin PAD": {
+            "max_transition": "1.000000",
+            "is_pad": "true",
+            "direction": "input",
+            "input_signal_level": "DVDD",
+            "rise_capacitance": "3.120867",
+            "comp_attribute rise_capacitance_range": "3.097167,3.138228",
+            "capacitance": "3.124510",
+            "fall_capacitance": "3.128153",
+            "comp_attribute fall_capacitance_range": "3.105517,3.141036"
+        },
+        "pin Y": {
+            "function": "((PAD))",
+            "direction": "output",
+            "max_capacitance": "0.500000",
+            "output_signal_level": "VDD",
+            "internal_power ": {
+                "related_pin": "PAD",
+                "rise_power power_outputs_1": {
+                    "index_1": [
+                        0.08,
+                        0.5,
+                        1
+                    ],
+                    "index_2": [
+                        0,
+                        0.04,
+                        0.1,
+                        0.3,
+                        0.4,
+                        0.5
+                    ],
+                    "values": [
+                        [
+                            -11.69866,
+                            -11.71029,
+                            -11.71848,
+                            -11.74747,
+                            -11.75516,
+                            -11.76319
+                        ],
+                        [
+                            -11.6025,
+                            -11.61148,
+                            -11.62326,
+                            -11.65218,
+                            -11.65695,
+                            -11.66106
+                        ],
+                        [
+                            -11.52328,
+                            -11.52959,
+                            -11.53763,
+                            -11.56862,
+                            -11.57906,
+                            -11.58565
+                        ]
+                    ]
+                },
+                "fall_power power_outputs_1": {
+                    "index_1": [
+                        0.08,
+                        0.5,
+                        1
+                    ],
+                    "index_2": [
+                        0,
+                        0.04,
+                        0.1,
+                        0.3,
+                        0.4,
+                        0.5
+                    ],
+                    "values": [
+                        [
+                            14.11118,
+                            14.14019,
+                            14.19212,
+                            14.29706,
+                            14.33235,
+                            14.35609
+                        ],
+                        [
+                            13.98494,
+                            14.01488,
+                            14.06348,
+                            14.17257,
+                            14.20768,
+                            14.23283
+                        ],
+                        [
+                            13.95927,
+                            13.98888,
+                            14.04238,
+                            14.15494,
+                            14.18391,
+                            14.14795
+                        ]
+                    ]
+                }
+            },
+            "timing ": {
+                "related_pin": "PAD",
+                "timing_type": "combinational",
+                "timing_sense": "positive_unate",
+                "cell_rise del_1_3_6": {
+                    "index_1": [
+                        0.08,
+                        0.5,
+                        1.0
+                    ],
+                    "index_2": [
+                        0.0,
+                        0.04,
+                        0.1,
+                        0.3,
+                        0.4,
+                        0.5
+                    ],
+                    "values": [
+                        [
+                            1.194687,
+                            1.249622,
+                            1.315057,
+                            1.505302,
+                            1.597084,
+                            1.68893
+                        ],
+                        [
+                            1.315003,
+                            1.369516,
+                            1.435463,
+                            1.625669,
+                            1.717888,
+                            1.80936
+                        ],
+                        [
+                            1.406014,
+                            1.461018,
+                            1.527292,
+                            1.717658,
+                            1.80962,
+                            1.901103
+                        ]
+                    ]
+                },
+                "rise_transition del_1_3_6": {
+                    "index_1": [
+                        0.08,
+                        0.5,
+                        1.0
+                    ],
+                    "index_2": [
+                        0.0,
+                        0.04,
+                        0.1,
+                        0.3,
+                        0.4,
+                        0.5
+                    ],
+                    "values": [
+                        [
+                            0.158066,
+                            0.229097,
+                            0.324836,
+                            0.657092,
+                            0.830993,
+                            1.002132
+                        ],
+                        [
+                            0.157926,
+                            0.228163,
+                            0.32459,
+                            0.658643,
+                            0.831231,
+                            1.006073
+                        ],
+                        [
+                            0.159421,
+                            0.228088,
+                            0.325884,
+                            0.656833,
+                            0.830812,
+                            1.00446
+                        ]
+                    ]
+                },
+                "cell_fall del_1_3_6": {
+                    "index_1": [
+                        0.08,
+                        0.5,
+                        1.0
+                    ],
+                    "index_2": [
+                        0.0,
+                        0.04,
+                        0.1,
+                        0.3,
+                        0.4,
+                        0.5
+                    ],
+                    "values": [
+                        [
+                            1.720282,
+                            1.764592,
+                            1.817828,
+                            1.963321,
+                            2.031135,
+                            2.09787
+                        ],
+                        [
+                            1.664072,
+                            1.709277,
+                            1.762171,
+                            1.907732,
+                            1.975481,
+                            2.042245
+                        ],
+                        [
+                            1.881963,
+                            1.927003,
+                            1.979997,
+                            2.125812,
+                            2.193516,
+                            2.260242
+                        ]
+                    ]
+                },
+                "fall_transition del_1_3_6": {
+                    "index_1": [
+                        0.08,
+                        0.5,
+                        1.0
+                    ],
+                    "index_2": [
+                        0.0,
+                        0.04,
+                        0.1,
+                        0.3,
+                        0.4,
+                        0.5
+                    ],
+                    "values": [
+                        [
+                            0.089055,
+                            0.143087,
+                            0.212978,
+                            0.436676,
+                            0.551915,
+                            0.668309
+                        ],
+                        [
+                            0.089341,
+                            0.143413,
+                            0.213395,
+                            0.437482,
+                            0.553378,
+                            0.66867
+                        ],
+                        [
+                            0.089134,
+                            0.142744,
+                            0.213484,
+                            0.437053,
+                            0.552995,
+                            0.669168
+                        ]
+                    ]
+                }
+            }
+        },
+        "pin DVDD": {
+            "direction": "inout",
+            "capacitance": "0"
+        },
+        "pin DVSS": {
+            "direction": "inout",
+            "capacitance": "0"
+        },
+        "pin VDD": {
+            "direction": "inout",
+            "capacitance": "0"
+        },
+        "pin VSS": {
+            "direction": "inout",
+            "capacitance": "0"
+        }
+    }
+}

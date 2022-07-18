@@ -1,0 +1,149 @@
+# Copyright 2022 GlobalFoundries PDK Authors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+MACRO gf180mcu_fd_io__brk2
+    CLASS PAD ;
+  ORIGIN 0 0 ;
+    FOREIGN gf180mcu_fd_io__brk2 0 0 ;
+  SIZE 2 BY 350 ;
+  SYMMETRY X Y R90 ;
+  SITE GF_IO_Site ;
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal3 ;
+        RECT 0 318 2 325 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0 318 2 325 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0 318 2 325 ;
+    END
+    PORT
+      LAYER Metal5 ;
+        RECT 0 246 2 253 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 0 246 2 253 ;
+    END
+    PORT
+      LAYER Metal3 ;
+        RECT 0 246 2 253 ;
+    END
+  END VSS
+  OBS
+    LAYER Metal1 ;
+      RECT 0 0 2 350 ;
+    LAYER Metal2 ;
+      RECT 0 0 2 350 ;
+    LAYER Metal3 ;
+      RECT 0 261.28 2 261.72 ;
+      RECT 0 213.28 2 213.72 ;
+      RECT 0 333.28 2 333.72 ;
+      RECT 0 205.28 2 205.72 ;
+      RECT 0 85.28 2 85.72 ;
+      RECT 0 101.28 2 101.72 ;
+      RECT 0 197.28 2 197.72 ;
+      RECT 0 149.28 2 149.72 ;
+      RECT 0 301.28 2 301.72 ;
+      RECT 0 181.28 2 181.72 ;
+      RECT 0 325.28 2 325.72 ;
+      RECT 0 117.28 2 117.72 ;
+      RECT 0 245.28 2 245.72 ;
+      RECT 0 341.28 2 341.72 ;
+      RECT 0 165.28 2 165.72 ;
+      RECT 0 253.28 2 253.72 ;
+      RECT 0 125.28 2 125.72 ;
+      RECT 0 133.28 2 133.72 ;
+      RECT 0 309.28 2 309.72 ;
+      RECT 0 277.28 2 277.72 ;
+      RECT 0 0 2 69.72 ;
+      RECT 0 269.28 2 269.72 ;
+      RECT 0 229.28 2 229.72 ;
+      RECT 0 285.28 2 285.72 ;
+      RECT 0 348.67 2 350 ;
+      RECT 0 317.28 2 317.72 ;
+      RECT 0 293.28 2 293.72 ;
+    LAYER Metal4 ;
+      RECT 0 348.67 2 350 ;
+      RECT 0 85.28 2 85.72 ;
+      RECT 0 101.28 2 101.72 ;
+      RECT 0 181.28 2 181.72 ;
+      RECT 0 117.28 2 117.72 ;
+      RECT 0 213.28 2 213.72 ;
+      RECT 0 197.28 2 197.72 ;
+      RECT 0 149.28 2 149.72 ;
+      RECT 0 309.28 2 309.72 ;
+      RECT 0 205.28 2 205.72 ;
+      RECT 0 261.28 2 261.72 ;
+      RECT 0 277.28 2 277.72 ;
+      RECT 0 253.28 2 253.72 ;
+      RECT 0 293.28 2 293.72 ;
+      RECT 0 341.28 2 341.72 ;
+      RECT 0 333.28 2 333.72 ;
+      RECT 0 245.28 2 245.72 ;
+      RECT 0 285.28 2 285.72 ;
+      RECT 0 165.28 2 165.72 ;
+      RECT 0 133.28 2 133.72 ;
+      RECT 0 301.28 2 301.72 ;
+      RECT 0 269.28 2 269.72 ;
+      RECT 0 0 2 69.72 ;
+      RECT 0 125.28 2 125.72 ;
+      RECT 0 325.28 2 325.72 ;
+      RECT 0 317.28 2 317.72 ;
+      RECT 0 229.28 2 229.72 ;
+    LAYER Metal5 ;
+      RECT 0 101.28 2 101.72 ;
+      RECT 0 325.28 2 325.72 ;
+      RECT 0 293.28 2 293.72 ;
+      RECT 0 253.28 2 253.72 ;
+      RECT 0 269.28 2 269.72 ;
+      RECT 0 205.28 2 205.72 ;
+      RECT 0 181.28 2 181.72 ;
+      RECT 0 165.28 2 165.72 ;
+      RECT 0 277.28 2 277.72 ;
+      RECT 0 213.28 2 213.72 ;
+      RECT 0 85.28 2 85.72 ;
+      RECT 0 245.28 2 245.72 ;
+      RECT 0 341.28 2 341.72 ;
+      RECT 0 309.28 2 309.72 ;
+      RECT 0 301.28 2 301.72 ;
+      RECT 0 317.28 2 317.72 ;
+      RECT 0 117.28 2 117.72 ;
+      RECT 0 261.28 2 261.72 ;
+      RECT 0 285.28 2 285.72 ;
+      RECT 0 0 2 69.72 ;
+      RECT 0 133.28 2 133.72 ;
+      RECT 0 149.28 2 149.72 ;
+      RECT 0 348.67 2 350 ;
+      RECT 0 229.28 2 229.72 ;
+      RECT 0 333.28 2 333.72 ;
+      RECT 0 197.28 2 197.72 ;
+      RECT 0 125.28 2 125.72 ;
+    LAYER Via1 ;
+      RECT 0 0 2 350 ;
+    LAYER Via2 ;
+      RECT 0 0 2 350 ;
+    LAYER Via3 ;
+      RECT 0 0 2 350 ;
+    LAYER Via4 ;
+      RECT 0 0 2 350 ;
+  END
+
+END gf180mcu_fd_io__brk2
