@@ -1,4 +1,4 @@
-GlobalFoundries 180um MCU I/O libraries
+GlobalFoundries 180nm MCU I/O libraries
 =======================================
 
 This repository contains the "I/O cells" implementation as part of
