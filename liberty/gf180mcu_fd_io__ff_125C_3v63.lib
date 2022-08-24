@@ -1,0 +1,108 @@
+/*
+ * Copyright 2022 GlobalFoundries PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+library ("gf180mcu_fd_io__ff_125C_3v63") {
+	technology("cmos");
+	delay_model : "table_lookup";
+	power_model : "table_lookup";
+	date : "31_Jul_2014";
+	revision : "1.1";
+	time_unit : "1ns";
+	leakage_power_unit : "1uW";
+	voltage_unit : "1V";
+	pulling_resistance_unit : "1kohm";
+	current_unit : "1uA";
+	capacitive_load_unit(1.000000, \
+	  "pf");
+	nom_voltage : 3.630000;
+	nom_temperature : 125.000000;
+	nom_process : 1.000000;
+	input_threshold_pct_rise : 50.000000;
+	output_threshold_pct_rise : 50.000000;
+	input_threshold_pct_fall : 50.000000;
+	output_threshold_pct_fall : 50.000000;
+	slew_lower_threshold_pct_rise : 10.000000;
+	slew_upper_threshold_pct_rise : 90.000000;
+	slew_lower_threshold_pct_fall : 10.000000;
+	slew_upper_threshold_pct_fall : 90.000000;
+	slew_derate_from_library : 1.000000;
+	default_fanout_load : 1.000000;
+	default_output_pin_cap : 0.000000;
+	default_inout_pin_cap : 0.000000;
+	default_input_pin_cap : 0.000000;
+	default_max_capacitance : 999.000000;
+	default_max_fanout : 1.000000;
+	default_cell_leakage_power : 0.000000;
+	default_leakage_power_density : 0.000000;
+	library_features("report_delay_calculation", \
+	  "report_power_calculation");
+	power_supply () {
+		default_power_rail : "VDD";
+		power_rail("DVDD",3.630000);
+		power_rail("DVSS",0.000000);
+		power_rail("VDD",3.630000);
+		power_rail("VSS",0.000000);
+	}
+	scaling_factors ("fast_fast_average_factors") {
+	}
+	scaling_factors ("gf_factors") {
+		k_volt_cell_rise : 0.000000;
+		k_volt_cell_fall : 0.000000;
+		k_volt_rise_transition : 0.000000;
+		k_volt_fall_transition : 0.000000;
+		k_volt_cell_leakage_power : 0.000000;
+		k_volt_internal_power : 0.000000;
+		k_temp_cell_rise : 0.000000;
+		k_temp_cell_fall : 0.000000;
+		k_temp_rise_transition : 0.000000;
+		k_temp_fall_transition : 0.000000;
+		k_temp_cell_leakage_power : 0.000000;
+		k_temp_internal_power : 0.000000;
+		k_process_cell_rise : 0.000000;
+		k_process_cell_fall : 0.000000;
+		k_process_rise_transition : 0.000000;
+		k_process_fall_transition : 0.000000;
+		k_process_cell_leakage_power : 0.000000;
+		k_process_internal_power : 0.000000;
+	}
+	power_lut_template ("power_inputs_1") {
+		variable_1 : "input_transition_time";
+		index_1("1, 2, 3");
+	}
+	operating_conditions ("fast_fast") {
+		process : 1.000000;
+		temperature : 125.000000;
+		voltage : 3.630000;
+		tree_type : "balanced_tree";
+		power_rail("DVDD",3.630000);
+		power_rail("DVSS",0.000000);
+		power_rail("VDD",3.630000);
+		power_rail("VSS",0.000000);
+	}
+	lu_table_template ("del_1_3_6") {
+		variable_1 : "input_net_transition";
+		index_1("1, 2, 3");
+		variable_2 : "total_output_net_capacitance";
+		index_2("1, 2, 3, 4, 5, 6");
+	}
+	power_lut_template ("power_outputs_1") {
+		variable_1 : "input_transition_time";
+		index_1("1, 2, 3");
+		variable_2 : "total_output_net_capacitance";
+		index_2("1, 2, 3, 4, 5, 6");
+	}
+	default_operating_conditions : "fast_fast";
+}
